@@ -64,6 +64,7 @@
     _scrollView.showsHorizontalScrollIndicator = NO;
     _scrollView.showsVerticalScrollIndicator = NO;
     _scrollView.contentSize = CGSizeMake(width * 3, height);
+    _scrollView.contentOffset = CGPointMake(width, 0);
     
     [self addSubview:_scrollView];
     
@@ -86,7 +87,7 @@
     _middleImageView = [[UIImageView alloc] initWithFrame:CGRectMake(width, 0, width, height)];
     
     _rightImageView = [[UIImageView alloc] initWithFrame:CGRectMake(width *2 , 0, width, height)];
-    
+    _currentNumber = 0;
     
     [_scrollView addSubview:_leftImageView];
     [_scrollView addSubview:_middleImageView];
